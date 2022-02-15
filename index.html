@@ -212,7 +212,41 @@
             <div class="block-review-subtitle">Collaborate over projects with your team and clients optimised for mobile and tablet don't let slow</div>
             <div class="say-about-us">
                 <div class="review">
-                    <div class="review-title">What People Say About Us</div>
+                    <div class="review-title">What People Say About Us1</div>
+                    <div class="review-person">
+                        <div class="review-person-title">Davit millar</div>
+                        <div class="review-person-subtitle">CEO, PParkivew int, Ltd</div>
+                    </div>
+                    <div class="review-about">
+                        <div class="star">
+                            <img src="/static/images/Star.svg" alt="star" class="star-img">
+                            <img src="/static/images/Star.svg" alt="star" class="star-img">
+                            <img src="/static/images/Star.svg" alt="star" class="star-img">
+                            <img src="/static/images/Star.svg" alt="star" class="star-img">
+                            <img src="/static/images/Star2.svg" alt="star" class="star-img">
+                        </div>
+                        <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit nisl, tincidunt commodo sit. Et, purus lectus odio cursus placerat leo, non etiam. Neque at leo risus orci,</p>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review-title">What People Say About Us2</div>
+                    <div class="review-person">
+                        <div class="review-person-title">Davit millar</div>
+                        <div class="review-person-subtitle">CEO, PParkivew int, Ltd</div>
+                    </div>
+                    <div class="review-about">
+                        <div class="star">
+                            <img src="/static/images/Star.svg" alt="star" class="star-img">
+                            <img src="/static/images/Star.svg" alt="star" class="star-img">
+                            <img src="/static/images/Star.svg" alt="star" class="star-img">
+                            <img src="/static/images/Star.svg" alt="star" class="star-img">
+                            <img src="/static/images/Star2.svg" alt="star" class="star-img">
+                        </div>
+                        <p class="review-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit nisl, tincidunt commodo sit. Et, purus lectus odio cursus placerat leo, non etiam. Neque at leo risus orci,</p>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="review-title">What People Say About Us3</div>
                     <div class="review-person">
                         <div class="review-person-title">Davit millar</div>
                         <div class="review-person-subtitle">CEO, PParkivew int, Ltd</div>
@@ -233,8 +267,8 @@
                 <img src="./static/images/quote.svg" alt="" class="quote">
             </div>
             <div class="review-buttons">
-                <img src="/static/images/buttons-lr.svg" alt="" class="rewiew-button">
-                <img src="/static/images/arrows.svg" alt="" class="arrows">
+                <img src="/static/images/buttons-lr.svg" alt="" onclick="plusDivs(-1)" class="rewiew-button">
+                <img src="/static/images/arrows.svg" alt="" onclick="plusDivs(1)" class="arrows">
             </div>
     </div>
 </div>
@@ -377,42 +411,28 @@
     </div>
 </div>
 
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
 
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
 
-<div class="slideshow">
-    <div class="w3-content w3-display-container">
-        <img class="mySlides" src="/static/images/google.png" style="width:100%">
-        <img class="mySlides" src="/static/images/microsoft.png" style="width:100%">
-        <img class="mySlides" src="/static/images/amazon.png" style="width:100%">
-        <img class="mySlides" src="/static/images/fedex.png" style="width:100%">
-
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-    </div>
-
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
+    function showDivs(n) {
+        var mySlides = document.getElementsByClassName("review")
+        if (n > mySlides.length) {
+            slideIndex = 1
         }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = x.length}
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex-1].style.display = "block";
+        if (n < 1) {
+            slideIndex = mySlides.length
         }
-    </script>
-</div>
-
-
-
+        for (var i = 0; i < mySlides.length; i++) {
+            mySlides[i].style.display = "none";
+        }
+        mySlides[slideIndex-1].style.display = "block";
+    }
+</script>
 
 </body>
 </html>
