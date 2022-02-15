@@ -69,8 +69,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 163px;
-    width: 172px;
     font-weight: 500;
     font-size: 20px;
     line-height: 160%;
@@ -79,6 +77,11 @@ body {
     border-radius: 4px;
     cursor: pointer;
     border: none;
+}
+
+.button-header {
+    margin-right: 163px;
+    width: 172px;
 }
 
 .intro-block {
@@ -129,7 +132,6 @@ body {
     display: flex;
     margin-top: 43px;
     height: 62px;
-
 }
 
 .common-intro {
@@ -218,19 +220,28 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: end;
+}
+
+.block-add-new {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.transaction-name-margin {
+    margin-top: 12px;
 }
 
 .transaction-form {
     padding-top: 16px;
     display: flex;
-    position: relative;
     margin: 16px 0 27px 0;
 }
 
 .transaction-arrow {
-    position: absolute;
-    top: 28px;
-    right: 18px;
+    position: relative;
+    right: 15px;
 }
 
 .transaction-input {
@@ -240,15 +251,11 @@ body {
 }
 
 .send-button {
-    background: #FF5A05;
-    border-radius: 4px;
     font-weight: bold;
     font-size: 11.1442px;
     line-height: 14px;
-    color: #FFFFFF;
     padding: 11px 23px 11px 13px;
     margin-left: 10px;
-    cursor: pointer;
 }
 
 .solutions {
@@ -316,6 +323,7 @@ body {
 
 .block-numbers {
     margin: 192px 0 181px 0;
+    background: url("/static/images/bg-numbers.png");
 }
 
 .numbers {
@@ -324,6 +332,9 @@ body {
 }
 
 .number {
+    width: 261px;
+    height: 371px;
+    background: url("/static/images/figure-numbers.png");
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -597,30 +608,17 @@ body {
 }
 
 .monthly-button {
-    background: #FF5A05;
     border-radius: 10px;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 160%;
-    text-align: center;
-    color: #FFFFFF;
     padding: 15px 28px 15px 25px;
-    cursor: pointer;
-    border: none;
 }
 
 .yearly-button {
     font-weight: 600;
-    font-size: 20px;
-    line-height: 160%;
-    text-align: center;
     color: #FF5A05;
     background: rgba(255, 90, 5, 0.1);
     border-radius: 10px;
     padding: 15px 27px 15px 28px;
     margin-left: 28px;
-    cursor: pointer;
-    border: none;
 }
 
 .prices {
@@ -638,10 +636,20 @@ body {
 }
 
 .price-icons {
-    background: #1F37FF;
-    border-radius: 5px;
     display: flex;
     justify-content: center;
+}
+
+.price-wrapper {
+    background: url("/static/images/bg-price.png");
+    width: 201px;
+    height: 109px;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+.price-icon {
+    padding: 16px 26px 55px;
 }
 
 .price-name {
@@ -693,16 +701,10 @@ body {
 }
 
 .install-button {
-    background: #FF5A05;
     border-radius: 10px;
     font-weight: bold;
     font-size: 18px;
-    line-height: 160%;
-    text-align: center;
-    color: #FFFFFF;
     padding: 14px 117px;
-    cursor: pointer;
-    border: none;
 }
 
 .newsletter {
@@ -716,6 +718,31 @@ body {
     background: #FDEEE7;
     border-radius: 30px;
     position: relative;
+    z-index: 2;
+}
+
+.block-newsletter::before {
+    content: "";
+    width: 1119px;
+    height: 405px;
+    background: #FDEEE7;
+    opacity: 0.4;
+    border-radius: 30px;
+    position: absolute;
+    top: -34px;
+    z-index: -2;
+}
+
+.block-newsletter::after {
+    content: "";
+    width: 990px;
+    height: 386px;
+    background: #FDEEE7;
+    opacity: 0.3;
+    border-radius: 30px;
+    position: absolute;
+    top: -68px;
+    z-index: -1;
 }
 
 .newsletter-title {
@@ -756,19 +783,11 @@ body {
 }
 
 .subscribe-button {
-    background: #FF5A05;
-    border-radius: 4px;
-    font-weight: 500;
     font-size: 16px;
-    line-height: 160%;
-    text-align: center;
-    color: #FFFFFF;
     padding: 14px 53px;
     position: absolute;
     right: 342px;
     top: 284px;
-    cursor: pointer;
-    border: none;
 }
 
 
@@ -796,20 +815,20 @@ body {
 
 .twitter-icon {
     position: absolute;
-    top: 12px;
-    left: 58px;
+    top: 13px;
+    left: 57px;
 }
 
 .instagram-icon {
     position: absolute;
-    top: 10px;
-    left: 102px;
+    top: 11px;
+    left: 101px;
 }
 
 .youtube-icon {
     position: absolute;
-    top: 10px;
-    left: 146px;
+    top: 12px;
+    left: 145px;
 }
 
 .title-links {
