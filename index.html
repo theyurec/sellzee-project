@@ -12,7 +12,7 @@
 <body>
 
 <div class="intro">
-    <div class="wrapper-xl">
+    <div class="wrapper">
         <div class="header">
             <img src="./static/images/logo.svg" alt="logo" class="logo">
             <div class="header-menu">
@@ -36,9 +36,6 @@
                     <button class="button-common common-intro">Get Started</button>
                     <button class="button-free">Free Trail</button>
                 </div>
-            </div>
-            <div class="intro-img">
-                <img src="./static/images/intro.png" alt="intro" class="pad-img" />
             </div>
         </div>
     </div>
@@ -73,7 +70,7 @@
 </div>
 
 <div class="solutions">
-    <div class="wrapper-solutions">
+    <div class="wrapper wrapper-solutions">
         <div class="solutions-img">
             <img src="./static/images/solutions.png" alt="" class="solution-picture">
             <div class="legend"></div>
@@ -353,66 +350,31 @@
                     <img src="./static/images/youtube.svg" alt="youtube" class="youtube-icon">
                 </div>
             </div>
-            <div class="footer-links">
-                <div class="title-links">SHORT LINKS</div>
-                <div class="footer-link">Home</div>
-                <div class="footer-link">Services</div>
-                <div class="footer-link">Screenshots</div>
-                <div class="footer-link">contact</div>
-            </div>
-            <div class="footer-links">
-                <div class="title-links">HELP LINK</div>
-                <div class="footer-link">How to download</div>
-                <div class="footer-link">How it work</div>
-                <div class="footer-link">Video tutorial</div>
-                <div class="footer-link">FAQ</div>
-            </div>
-            <div class="footer-links">
-                <div class="title-links">SHORT LINKS</div>
-                <div class="footer-link">Google Play Store</div>
-                <div class="footer-link">Apple App Store</div>
-                <div class="footer-link">Download Directly</div>
+            <div class="block-links">
+                <div class="footer-links">
+                    <div class="title-links">SHORT LINKS</div>
+                    <div class="footer-link">Home</div>
+                    <div class="footer-link">Services</div>
+                    <div class="footer-link">Screenshots</div>
+                    <div class="footer-link">contact</div>
+                </div>
+                <div class="footer-links">
+                    <div class="title-links">HELP LINK</div>
+                    <div class="footer-link">How to download</div>
+                    <div class="footer-link">How it work</div>
+                    <div class="footer-link">Video tutorial</div>
+                    <div class="footer-link">FAQ</div>
+                </div>
+                <div class="footer-links">
+                    <div class="title-links">SHORT LINKS</div>
+                    <div class="footer-link">Google Play Store</div>
+                    <div class="footer-link">Apple App Store</div>
+                    <div class="footer-link">Download Directly</div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-
-
-<div class="slideshow">
-    <div class="w3-content w3-display-container">
-        <img class="mySlides" src="/static/images/google.png" style="width:100%">
-        <img class="mySlides" src="/static/images/microsoft.png" style="width:100%">
-        <img class="mySlides" src="/static/images/amazon.png" style="width:100%">
-        <img class="mySlides" src="/static/images/fedex.png" style="width:100%">
-
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
-    </div>
-
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
-
-        function showDivs(n) {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            if (n > x.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = x.length}
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex-1].style.display = "block";
-        }
-    </script>
-</div>
-
-
-
 
 </body>
 </html>
